@@ -25,7 +25,10 @@ public class BaseTest {
         browser=playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
 
 
-        browserContext=browser.newContext();
+        browserContext=browser.newContext(
+                new Browser.NewContextOptions().setBaseURL("https://automationexercise.com"));
+        browserContext.route("**/*googlesyndication*/**", route -> route.abort());
+        browserContext.route("**/*doubleclick*/**", route -> route.abort());
 
 
         page= browserContext.newPage();
