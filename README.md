@@ -29,10 +29,10 @@ src/
 ## Current Coverage
 
 - [x] Home page loads
-- [ ] User registration and login (valid / invalid)
-- [ ] Product search
-- [ ] Cart and checkout
-- [ ] REST Assured API suite
+- [x] User registration and login (valid / invalid)
+- [x] Product search
+- [x] Cart and checkout
+- [x] REST Assured API suite
 
 ## How to Run
 

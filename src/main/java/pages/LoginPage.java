@@ -59,4 +59,9 @@ public class LoginPage{
     }
 
 
+    public void logout() {
+        page.getByText("Logout").click();
+    }
+
+
 }

@@ -20,4 +20,11 @@ public class CartPage {
 
 
     }
+
+    public CheckoutPage proceedCheckout(){
+
+        page.getByText("Proceed To Checkout").click();
+
+        return new CheckoutPage(page);
+    }
 }

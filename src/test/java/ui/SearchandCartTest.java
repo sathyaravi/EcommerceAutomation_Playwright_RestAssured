@@ -3,6 +3,8 @@ package ui;
 import base.BaseTest;
 import org.testng.annotations.Test;
 import pages.CartPage;
+import pages.ConfirmationPage;
+import pages.PaymentPage;
 import pages.ProductPage;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
@@ -13,7 +15,7 @@ public class SearchandCartTest extends BaseTest {
 
     public void searchedProductTest(){
 
-        ProductPage productPage=new ProductPage(page).open().searchProduct("tops");
+        ProductPage productPage=new ProductPage(page).open().searchProduct("Winter Top");
 
         assertThat(productPage.results().first()).isVisible();
 
@@ -24,7 +26,7 @@ public class SearchandCartTest extends BaseTest {
 
     public void addtoCartTest(){
 
-        ProductPage productPage=new ProductPage(page).open().searchProduct("Winter top");
+        ProductPage productPage=new ProductPage(page).open().searchProduct("Winter Top");
 
         productPage.viewProduct().addToCart();
 
@@ -32,5 +34,11 @@ public class SearchandCartTest extends BaseTest {
 
 
         assertThat(cartPage.getItems().first()).containsText("Winter Top");
+
+
     }
-}
+
+
+
+    }
+
